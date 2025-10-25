@@ -2,11 +2,6 @@ const { Schema, model, models } = require('mongoose');
 
 const DomainSchema = new Schema(
     {
-        user: {
-            type: Schema.Types.ObjectId,
-            ref: 'User',
-            required: true
-        },
         domainName: {
             type: String,
             required: true
@@ -16,6 +11,10 @@ const DomainSchema = new Schema(
             required: true
         },
         value: {
+            type: String,
+            required: true
+        },
+        zone: {
             type: String,
             required: true
         }
