@@ -14,19 +14,9 @@ RUN apt-get update && \
     apt-get clean
 
 # Copy everything
-COPY package.json .
-COPY bun.lockb .
-COPY .env .
-COPY src ./src
-COPY index.js index.js
+COPY . .
 
-# Install app deps
 RUN bun install --production
-
-# Ports
-EXPOSE 80
-EXPOSE 443
-EXPOSE 3001
 
 ENV NODE_ENV=production
 
