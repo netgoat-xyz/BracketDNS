@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: netgoat/bracketDNS:latest
+          tags: netgoat/bracketdns:latest
